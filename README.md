@@ -9,23 +9,21 @@ public class Primos {
     public static void main(String[] args) 
     {
         System.out.println("\t***NUMEROS PRIMOS***\n");
-        int numero=0;
+        int numero, c=0;
         Scanner tec= new Scanner(System.in);
         System.out.println("Ingrese el Numero a Evaluar");
         numero=tec.nextInt();
         
         for(int x=numero;x>0;x--)
         {
-            if(x%2==0)
+            if(numero%x==0)
             {
-                System.out.println("El numero "+ numero +" es Primo");
+                c=c+1;                
             }
-            else
-            {
-                System.out.println("El numero "+ numero +" no es Primo");
-            }
-        }
-        
+            
+        }   
+             if(c==2) {System.out.println("El numero "+ numero +" es Primo");}
+             else     {System.out.println("El numero "+ numero +" no es Primo");}
     }
     
 }
